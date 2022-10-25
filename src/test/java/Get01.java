@@ -43,21 +43,36 @@ Given
     @Test
     public void get01() {
         //i)  Set the URL
-        String url="https://restful-booker.herokuapp.com/booking/101";
+        String url = "https://restful-booker.herokuapp.com/booking/101";
         //ii) Set the expected Data (beklenen datanin olusturulmasi, post, put, patch)
         // Bizden post,put yada patch istenmedigi icin bu case de kullanmayacagiz
         //iii) Type code to send request (Talep gondermek icin kod yazimi)
-        Response response=given().when().get(url);
+        Response response = given().when().get(url);
         response.prettyPrint();
-       //iv) Do Assertion ()dogrulama yapmak
+        //iv) Do Assertion ()dogrulama yapmak
         response.then()
-               .assertThat()
-               .statusCode(200)
+                .assertThat()
+                .statusCode(200)
                 .contentType("application/json").statusLine("HTTP/1.1 200 OK");
 
-
-
-
+        //Status Code konsola yazdiralim
+        System.out.println("Status Code: " + response.getStatusCode());
+        System.out.println("********************************************");
+        //Content Type konsola yazdiralim
+        System.out.println("Content Type: " + response.getContentType());
+        System.out.println("********************************************");
+        //Status Line konsola yazdiralim
+        System.out.println("Status Line: " + response.getStatusLine());
+        System.out.println("********************************************");
+        //Header konsola    yazdiralim
+        System.out.println("Header: " + response.getHeader("Server"));
+        System.out.println("********************************************");
+        //Headers konsola yazdiralim
+        System.out.println("Headers: " + response.getHeaders());
+        System.out.println("********************************************");
+        //Time konsola    yazdiralim
+        System.out.println("Time: " + response.getTime());
+        System.out.println("********************************************");
 
 
     }
