@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 
-public class Get03 extends JsonPlaceHolderBaseUrl {
+public class Get03 extends RestfulBaseUrl {
 
     /*
         Given
