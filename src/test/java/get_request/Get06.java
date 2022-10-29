@@ -1,3 +1,4 @@
+package get_request;
 
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
