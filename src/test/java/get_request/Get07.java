@@ -8,7 +8,6 @@ import org.junit.Test;
 import java.util.List;
 
 import static io.restassured.RestAssured.*;
-import static org.junit.Assert.*;
 
 public class Get07 extends RestfulBaseUrl {
 /*

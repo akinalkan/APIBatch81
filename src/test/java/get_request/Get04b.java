@@ -32,13 +32,19 @@ And
 
     @Test
     public void get04() {
-        //First Step:Set the Url
+//Set the Url
         spec.pathParam("first","booking").queryParams("firstname","Almedin","lastname","Alikadic");
-        //Second Step:Set The Expected Data
-        //Third Step:Send The Request and Get The Response
-        Response response =given().spec(spec).when().get("/{first}");
+
+//Set The Expected Data
+
+//Send The Request and Get The Response
+        Response response = given().spec(spec).when().get("/{first}");
         response.prettyPrint();
-        assertEquals(200,response.getStatusCode());
+
+//Do Assertion
+        assertEquals(200,response.statusCode());
         assertTrue(response.asString().contains("bookingid"));
+
     }
+
 }
