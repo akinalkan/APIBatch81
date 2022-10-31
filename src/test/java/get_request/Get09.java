@@ -56,10 +56,10 @@ public class Get09 extends RestfulBaseUrl {//Nested map icerir
        //Do Assertion
         Map<String,Object> actualData=response.as(HashMap.class);
         System.out.println("actualData = " + actualData);
-        assertEquals(expectedData.get("firstname"),expectedData.get("firstname"));
-        assertEquals(expectedData.get("lastname"),expectedData.get("lastname"));
-        assertEquals(expectedData.get("totalprice"),expectedData.get("totalprice"));
-        assertEquals(expectedData.get("depositpaid"),expectedData.get("depositpaid"));
+        assertEquals(expectedData.get("firstname"),actualData.get("firstname"));
+        assertEquals(expectedData.get("lastname"),actualData.get("lastname"));
+        assertEquals(expectedData.get("totalprice"),actualData.get("totalprice"));
+        assertEquals(expectedData.get("depositpaid"),actualData.get("depositpaid"));
         assertEquals(bookindatesMap.get("checkin"), ((Map)(actualData.get("bookingdates"))).get("checkin"));
         //Key-Value ikilileri String-Object şeklinde olduğundan, Bookingdata value kısmını casting ile Map yaptık.
         assertEquals(bookindatesMap.get("checkout"), ((Map)(actualData.get("bookingdates"))).get("checkout"));
