@@ -10,7 +10,7 @@ public class JsonPlaceHolderTestData {
 
         Map<String,Object> expectedDataMap = new HashMap<>();
         expectedDataMap.put("userId",1);
-        expectedDataMap.put("title","quis ut nam facilis et officia qui");
+        expectedDataMap.put("title",title);
         expectedDataMap.put("completed",false);
 
         return expectedDataMap;

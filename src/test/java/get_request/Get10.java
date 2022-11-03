@@ -14,25 +14,24 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class Get10 extends GoRestBaseUrl {
     /*
-   Given
-       https://gorest.co.in/public/v1/users/2986
-   When
-       User send GET Request to the URL
-   Then
-       Status Code should be 200
-   And
-       Response body should be like
-    {
+  Given
+      https://gorest.co.in/public/v1/users/2986
+  When
+      User send GET Request to the URL
+  Then
+      Status Code should be 200
+  And
+      Response body should be like
    {
-    "meta": null,
-    "data": {
+  "meta": null,
+  "data": {
         "id": 2986,
-        "name": "Navin Talwar",
-        "email": "navin_talwar@mclaughlin.name",
-        "gender": "male",
-        "status": "inactive"
+       "name": "Kanaka Jain",
+       "email": "kanaka_jain@stark.net",
+       "gender": "male",
+       "status": "active"
+           }
     }
-}
 */
     @Test
     public void get10() {
