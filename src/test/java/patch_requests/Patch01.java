@@ -50,6 +50,7 @@ I send PATCH Request to the Url
         //Do Assertion
         Map<String,Object>actualData=response.as(HashMap.class);
         System.out.println("actualData = " + actualData);
+
         assertEquals(200,response.statusCode());
         assertEquals(expectedData.get("title"),actualData.get("title"));
 

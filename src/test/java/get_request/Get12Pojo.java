@@ -36,12 +36,12 @@ And
 
     @Test
     public void get12Pojo() {
-        spec.pathParams("first", "booking", "second", 18);
+        spec.pathParams("first", "booking", "second", 15);
 
 //Set the Expected Data
-BookingDatesPojo bookingDatesPojo = new BookingDatesPojo();
-        System.out.println("bookingDatesPojo.toString() = " + bookingDatesPojo.toString());
-        BookingPojo expectedData= new BookingPojo("Dane","Combs",111,true,bookingDatesPojo,"Breakfast");
+BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2018-01-01","2019-01-01");
+        System.out.println("bookingDatesPojo = " + bookingDatesPojo);
+        BookingPojo expectedData= new BookingPojo("Fabio","Colque",111,true,bookingDatesPojo,"Breakfast");
         System.out.println("expectedData = " + expectedData);
 
         //Send the Request and Get the Response

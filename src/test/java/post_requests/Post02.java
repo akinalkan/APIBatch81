@@ -53,6 +53,7 @@ public class Post02 extends RestfulBaseUrl {
         //Set the Expected Data
         RestfulTestData obj = new RestfulTestData();
         Map<String,String > bookingdatesMap = obj.bookingdatesMethod("2021-09-09", "2021-09-21");
+
         Map<String,Object> expectedData = obj.expectedDataMethod("John","Doe",11111,true,bookingdatesMap);
         System.out.println("expectedData = " + expectedData);
 
