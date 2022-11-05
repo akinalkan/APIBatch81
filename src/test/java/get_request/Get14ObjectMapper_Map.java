@@ -32,26 +32,26 @@ public class Get14ObjectMapper_Map extends JsonplaceholderBaseUrl {
     @Test
     public void get14() {
         //Set the Url
-        spec.pathParams("first","todos","second",198);
+        spec.pathParams("first", "todos", "second", 198);
         //Set the Expected Data
         JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
-        String expectedDataInString=obj.expectedDataInString(10,"quis eius est sint explicabo",true);
+        String expectedDataInString = obj.expectedDataInString(10, "quis eius est sint explicabo", true);
 
-        Map expectedData=ObjectMapperUtils.convertJsonToJava(expectedDataInString, Map.class);
+        Map expectedData = ObjectMapperUtils.convertJsonToJava(expectedDataInString, Map.class);
         System.out.println("expectedData = " + expectedData);
 
         //Sebnd the Request and Get the Response
-       Response response= given().spec(spec).when().get("/{first}/{second}");
-       response.prettyPrint();
+        Response response = given().spec(spec).when().get("/{first}/{second}");
+        response.prettyPrint();
 
-       //Do Assertion
-       Map actualData=ObjectMapperUtils.convertJsonToJava(response.asString(),Map.class);
-       System.out.println("actualData = " + actualData);
+        //Do Assertion
+        Map actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), Map.class);
+        System.out.println("actualData = " + actualData);
 
-assertEquals(200,response.getStatusCode());
-assertEquals(expectedData.get("userId"),actualData.get("userId"));
-assertEquals(expectedData.get("title"),actualData.get("title"));
-assertEquals(expectedData.get("completed"),actualData.get("completed"));
+        assertEquals(200, response.getStatusCode());
+        assertEquals(expectedData.get("userId"), actualData.get("userId"));
+        assertEquals(expectedData.get("title"), actualData.get("title"));
+        assertEquals(expectedData.get("completed"), actualData.get("completed"));
 
 
     }

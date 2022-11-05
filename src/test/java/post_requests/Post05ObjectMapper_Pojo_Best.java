@@ -10,7 +10,7 @@ import utils.ObjectMapperUtils;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class Post05ObjectMapper_Pojo extends JsonplaceholderBaseUrl {
+public class Post05ObjectMapper_Pojo_Best extends JsonplaceholderBaseUrl {
     /*
          Given
            1) https://jsonplaceholder.typicode.com/todos
