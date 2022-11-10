@@ -1,6 +1,7 @@
 package get_request;
 
 import base_url.ReqresBaseUrl;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -44,8 +45,13 @@ public class Get02b extends ReqresBaseUrl {
         assertEquals("HTTP/1.1 404 Not Found", response.statusLine());
         assertEquals("cloudflare", response.getHeader("Server"));
         assertEquals(0, response.asString().replaceAll("[^A-Za-z0-9]", "").length());
-        assertEquals(0, response.asString().replaceAll("[^A-Za-z0-9]", "").length());
         assertEquals(2, response.asString().replaceAll("\\s", "").length());
+
+        response.
+                then().
+                statusCode(404).
+                contentType(ContentType.JSON).
+                statusLine("HTTP/1.1 404 Not Found");
 
 
     }

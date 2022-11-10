@@ -33,7 +33,7 @@ And
     @Test
     public void get04() {
 //Set the Url
-        spec.pathParam("first","booking").queryParams("firstname","Almedin","lastname","Alikadic");
+        spec.pathParam("first", "booking").queryParams("firstname", "Almedin", "lastname", "Alikadic");
 
 //Set The Expected Data
 
@@ -42,8 +42,8 @@ And
         response.prettyPrint();
 
 //Do Assertion
-        assertEquals(200,response.statusCode());
-        assertTrue(response.asString().contains("bookingid"));
+        assertEquals(200, response.statusCode());
+        assertTrue(response.asString().contains(""));
 
     }
 
